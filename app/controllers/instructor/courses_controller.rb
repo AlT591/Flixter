@@ -5,19 +5,24 @@ before_action :authenticate_user!
     @course = Course.new
   end
 
-  def create
-    @course= current_user.courses.create(course_params)
-    redirect_to instrcutor_couse_path(@course)
+   def create
+    @course = current_user.courses.create(course_params)
+    if @course.valid?
+      redirect_to instructor_course_path(@course)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
-  def show
+
+ def show
     @course = Course.find(params[:id])
   end
 
-  private
+   private
 
   def course_params
-    params.require(:course).permit(:titile, :description, :cost)
+    params.require(:course).permit(:title, :description, :cost)
   end
 
 end
