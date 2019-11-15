@@ -12,6 +12,8 @@
   </head>
 
   <body>
+     <!--lesson 12 -->
+    <div id="flex-content-container">
      <!-- Lesson 6 adding the nav bar to landing page from bootstrap components, took out the search function and other unwanted features from nomster app lesson. Change nav to black. --> 
      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +54,15 @@
 <% end %>
 
     <%= yield %>
+</div>
 
+    <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
 
   </body>
 </html>
