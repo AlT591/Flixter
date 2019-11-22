@@ -17,8 +17,7 @@ before_action :require_authorized_for_current_course, only: [:show]
 
 
  def show
-    @course = Course.find(params[:id])
-    render :text => @course.inspect
+ 
 
   end
 
