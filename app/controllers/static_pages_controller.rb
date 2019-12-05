@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   def privacy
   end
 
-  def Team
+  def team
   end
   
 end
